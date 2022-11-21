@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import mainLogo from "/logo.svg";
+import lion from "/lion.svg";
+import logoWithText from "/logoWithText.svg";
+import instagram from "/instagram.svg";
+import "animate.css";
+const allPosts = await Astro.glob('../../pages/posts/*.mdx');
+import { Debug } from 'astro/components';
+
+---
+
+<Layout title="FTC VERTEX 15534">
+	<main>
+        <div class="flex flex-col w-screen h-screen justify-center items-center">
+            <h1>Blog List</h1>
+            <ul>
+                {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}<br>{new Date(post.frontmatter.pubDate).toLocaleDateString()}</a></li>)}
+            </ul>
+        </div>
+	</main>
+</Layout>

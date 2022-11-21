@@ -6,7 +6,8 @@ export interface Props {
 	title: string;
 }
 
-const { title } = Astro.props;
+const { frontmatter } = Astro.props;
+const date = new Date(frontmatter.pubDate).toLocaleDateString();
 ---
 <script>
 	import LocomotiveScroll from 'locomotive-scroll';
@@ -25,12 +26,18 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>{frontmatter.title}</title>
 	</head>
 	<body>
 		<Navbar></Navbar>
 		<div data-scroll-container>
-			<slot />
+			<div class="flex w-screen h-auto min-h-screen justify-center">
+				<div class="w-2/3 h-auto py-32 prose-inverse prose-lg prose-headings:font-bold prose-headings:font-display prose-a:underline-offset-2 prose-a:underline prose-a:duration-200 hover:prose-a:text-red-500 hover:prose-a:underline-offset-4">
+					<h1 class="my-0">{frontmatter.title}</h1>
+					<i>{date}</i>
+					<slot />
+				</div>
+			</div>
 			<Footer></Footer>
 		</div>
 	</body>
