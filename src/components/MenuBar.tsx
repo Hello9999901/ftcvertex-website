@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import { IoMdClose, IoIosMenu } from 'react-icons/io'
+import { IoMdClose, IoIosMenu } from 'react-icons/io/index'
 
 export default function Menu() {
     const [isActive, setIsActive] = useState(false);
