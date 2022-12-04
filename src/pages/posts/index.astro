@@ -10,35 +10,41 @@ import { Debug } from "astro/components";
 ---
 
 <Layout title="FTC VERTEX 15534">
-  <main>
-    <div class="flex h-auto w-screen justify-center py-32">
-      <div class="w-2/3">
-        <h1 class="pb-8 text-center font-hype text-9xl">OUTREACH</h1>
-        <ul>
-          {
-            allPosts.map((post) => (
-              <li class="py-6">
-                <a href={post.url}>
-                  <p class="font-display text-3xl font-bold">
-                    {post.frontmatter.title}
-                  </p>
-                </a>
-                <div class="pl-4 pt-2">
-                  <p>
-                    {new Date(post.frontmatter.pubDate).toLocaleDateString()}
-                  </p>
-                  <p>{post.frontmatter.desc}</p>
-                  <p class="text-neutral-500">
-                    {post.frontmatter.tags.map((tag: any) => (
-                      <span class="pr-2">{"#" + tag}</span>
-                    ))}
-                  </p>
-                </div>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-    </div>
-  </main>
+	<main>
+		<div class="flex h-auto w-screen justify-center py-32">
+			<div class="w-2/3">
+				<h1 class="pb-8 text-center font-hype text-9xl">OUTREACH</h1>
+				<ul>
+					{
+						allPosts.map((post) => (
+							<li class="py-6">
+								<a href={post.url}>
+									<p class="font-display text-3xl font-bold">
+										{post.frontmatter.title}
+									</p>
+								</a>
+								<div class="pl-4 pt-2">
+									<p>
+										{new Date(
+											post.frontmatter.pubDate
+										).toLocaleDateString()}
+									</p>
+									<p>{post.frontmatter.desc}</p>
+									<p class="text-neutral-500">
+										{post.frontmatter.tags.map(
+											(tag: any) => (
+												<span class="pr-2">
+													{"#" + tag}
+												</span>
+											)
+										)}
+									</p>
+								</div>
+							</li>
+						))
+					}
+				</ul>
+			</div>
+		</div>
+	</main>
 </Layout>

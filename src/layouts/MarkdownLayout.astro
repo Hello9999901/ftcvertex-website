@@ -3,7 +3,7 @@ import "../styles/global.css";
 import Footer from "../components/footer.astro";
 import Navbar from "../components/navbar.astro";
 export interface Props {
-  title: string;
+	title: string;
 }
 
 const { frontmatter } = Astro.props;
@@ -11,38 +11,38 @@ const date = new Date(frontmatter.pubDate).toLocaleDateString();
 ---
 
 <script>
-  import LocomotiveScroll from "locomotive-scroll";
+	import LocomotiveScroll from "locomotive-scroll";
 
-  const scroll = new LocomotiveScroll({
-    el: document.querySelector("[data-scroll-container]") as HTMLElement,
-    smooth: true,
-    resetNativeScroll: true,
-  });
+	const scroll = new LocomotiveScroll({
+		el: document.querySelector("[data-scroll-container]") as HTMLElement,
+		smooth: true,
+		resetNativeScroll: true,
+	});
 </script>
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{frontmatter.title}</title>
-  </head>
-  <body>
-    <Navbar />
-    <div data-scroll-container>
-      <div class="flex h-auto min-h-screen w-screen justify-center">
-        <div
-          class="prose-inverse prose-lg h-auto w-2/3 py-32 prose-headings:font-display prose-headings:font-bold prose-a:underline prose-a:underline-offset-2 prose-a:duration-200 hover:prose-a:text-red-500 hover:prose-a:underline-offset-4"
-        >
-          <h1 class="my-0">{frontmatter.title}</h1>
-          <i>{date}</i>
-          <slot />
-        </div>
-      </div>
-      <Footer />
-    </div>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{frontmatter.title}</title>
+	</head>
+	<body>
+		<Navbar />
+		<div data-scroll-container>
+			<div class="flex h-auto min-h-screen w-screen justify-center">
+				<div
+					class="prose-inverse prose-lg h-auto w-2/3 py-32 prose-headings:font-display prose-headings:font-bold prose-a:underline prose-a:underline-offset-2 prose-a:duration-200 hover:prose-a:text-red-500 hover:prose-a:underline-offset-4"
+				>
+					<h1 class="my-0">{frontmatter.title}</h1>
+					<i>{date}</i>
+					<slot />
+				</div>
+			</div>
+			<Footer />
+		</div>
+	</body>
 </html>
 
 <style is:global></style>

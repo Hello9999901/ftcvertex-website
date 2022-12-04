@@ -25,13 +25,13 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    tailwind(),
-    mdx(),
-    image(),
-    partytown(),
-    sitemap(),
-    prefetch(),
-    react(),
-  ],
+	integrations: [
+		tailwind(),
+		mdx(),
+		image(),
+		partytown(),
+		sitemap(),
+		prefetch(),
+		react(),
+	],
 });
