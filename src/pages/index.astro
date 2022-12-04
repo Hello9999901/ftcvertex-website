@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 import mainLogo from "/logo.svg";
 import lion from "/lion.svg";
 import logoWithText from "/logoWithText.svg";
@@ -8,96 +8,100 @@ import "animate.css";
 ---
 
 <Layout title="FTC VERTEX 15534">
-	<main>
-		<div>
-			<div class="flex w-screen h-screen justify-center items-center">
-				<div
-					class="relative h-3/4 w-full z-10"
-					data-scroll
-					data-scroll-speed="3"
-				>
-					<img src={mainLogo} alt="" class="w-full h-full"/>
-				</div>
-				<div class="absolute">
-					<h1
-						class="font-hype text-[250px] text-center tracking-tight animate__animated animate__fadeIn"
-						data-scroll
-						data-scroll-speed="5"
-					>
-						1 5 5 3 4
-					</h1>
-					<p
-						class="text-3xl text-left font-display font-bold tracking-wide animate__animated animate__fadeIn"
-						data-scroll
-						data-scroll-speed="2"
-					>
-						FTC VERTEX
-					</p>
-				</div>
-			</div>
-			<h1 class="absolute font-hype text-4xl origin-top-right rotate-90 right-0 text-[#9a1d2f]">
-				<span class="px-20">XAPITI DEOT</span>
-				<span class="px-20">NON SIBI</span>
-			</h1>
-			<h1 class="absolute font-hype text-4xl origin-bottom-left rotate-90 left-0 text-[#9a1d2f]">
-				<span class="px-20">XAPITI DEOT</span>
-				<span class="px-20">NON SIBI</span>
-			</h1>
-			<div class="h-screen px-48 py-32">
-				<div class="max-w-[1200px]">
-					<h1
-						class="font-display font-bold text-8xl -mb-3"
-						data-scroll
-						data-scroll-speed="2"
-					>
-						About Us
-					</h1>
-					<p class="pl-6 font-body text-lg">
-						Founded in the fall of 2018, our team consists of a
-						diverse group of students passionate about using
-						knowledge in robotics and STEAM to benefit larger
-						communities. Though we have enjoyed enormous
-						success, we continue to strive to explore the limit
-						of the intersection of knowledge and creativity.
-						Going into our fifth year, we are thrilled by the
-						challenges that await us in the upcoming 2022-2023
-						season!
-					</p>
-				</div>
-			</div>
-			<div class="h-screen px-48 py-10">
-				<h1
-					class="font-display font-bold text-8xl text-right py-10"
-					data-scroll
-					data-scroll-speed="2"
-					data-scroll-direction="horizontal"
-					data-scroll-delay="1"
-				>
-					More
-				</h1>
-				<div class="py-6">
-					<div class="h-8 w-100% bg-gradient-to-r from-transparent to-[#9a1d2f]"></div>
-					<h1 class="font-display font-bold text-lg">
-						100% Giga Chads
-					</h1>
-				</div>
-				<div class="py-6">
-					<div class="h-8 w-100% bg-gradient-to-r from-transparent to-[#9a1d2f]"></div>
-					<h1 class="font-display font-bold text-lg">
-						100% Better
-					</h1>
-				</div>
-				<div class="py-6">
-					<div class="h-8 w-1/2 bg-gradient-to-r from-transparent to-[#9a1d2f]"></div>
-					<h1 class="font-display font-bold text-lg">
-						50% Brain Cells
-					</h1>
-				</div>
-			</div>
-			<h1 class="absolute font-hype text-4xl origin-top-right rotate-90 right-0 text-[#9a1d2f]">
-				<span class="px-20">XAPITI DEOT</span>
-				<span class="px-20">NON SIBI</span>
-			</h1>
-		</div>
-	</main>
+  <main>
+    <div>
+      <div class="flex h-screen w-screen items-center justify-center">
+        <div
+          class="relative z-10 h-3/4 w-full"
+          data-scroll
+          data-scroll-speed="3"
+        >
+          <img src={mainLogo} alt="" class="h-full w-full" />
+        </div>
+        <div class="absolute">
+          <h1
+            class="animate__animated animate__fadeIn text-center font-hype text-[250px] tracking-tight"
+            data-scroll
+            data-scroll-speed="5"
+          >
+            1 5 5 3 4
+          </h1>
+          <p
+            class="animate__animated animate__fadeIn text-left font-display text-3xl font-bold tracking-wide"
+            data-scroll
+            data-scroll-speed="2"
+          >
+            FTC VERTEX
+          </p>
+        </div>
+      </div>
+      <h1
+        class="absolute right-0 origin-top-right rotate-90 font-hype text-4xl text-[#9a1d2f]"
+      >
+        <span class="px-20">XAPITI DEOT</span>
+        <span class="px-20">NON SIBI</span>
+      </h1>
+      <h1
+        class="absolute left-0 origin-bottom-left rotate-90 font-hype text-4xl text-[#9a1d2f]"
+      >
+        <span class="px-20">XAPITI DEOT</span>
+        <span class="px-20">NON SIBI</span>
+      </h1>
+      <div class="h-screen px-48 py-32">
+        <div class="max-w-[1200px]">
+          <h1
+            class="-mb-3 font-display text-8xl font-bold"
+            data-scroll
+            data-scroll-speed="2"
+          >
+            About Us
+          </h1>
+          <p class="pl-6 font-body text-lg">
+            Founded in the fall of 2018, our team consists of a diverse group of
+            students passionate about using knowledge in robotics and STEAM to
+            benefit larger communities. Though we have enjoyed enormous success,
+            we continue to strive to explore the limit of the intersection of
+            knowledge and creativity. Going into our fifth year, we are thrilled
+            by the challenges that await us in the upcoming 2022-2023 season!
+          </p>
+        </div>
+      </div>
+      <div class="h-screen px-48 py-10">
+        <h1
+          class="py-10 text-right font-display text-8xl font-bold"
+          data-scroll
+          data-scroll-speed="2"
+          data-scroll-direction="horizontal"
+          data-scroll-delay="1"
+        >
+          More
+        </h1>
+        <div class="py-6">
+          <div
+            class="w-100% h-8 bg-gradient-to-r from-transparent to-[#9a1d2f]"
+          >
+          </div>
+          <h1 class="font-display text-lg font-bold">100% Giga Chads</h1>
+        </div>
+        <div class="py-6">
+          <div
+            class="w-100% h-8 bg-gradient-to-r from-transparent to-[#9a1d2f]"
+          >
+          </div>
+          <h1 class="font-display text-lg font-bold">100% Better</h1>
+        </div>
+        <div class="py-6">
+          <div class="h-8 w-1/2 bg-gradient-to-r from-transparent to-[#9a1d2f]">
+          </div>
+          <h1 class="font-display text-lg font-bold">50% Brain Cells</h1>
+        </div>
+      </div>
+      <h1
+        class="absolute right-0 origin-top-right rotate-90 font-hype text-4xl text-[#9a1d2f]"
+      >
+        <span class="px-20">XAPITI DEOT</span>
+        <span class="px-20">NON SIBI</span>
+      </h1>
+    </div>
+  </main>
 </Layout>

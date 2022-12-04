@@ -3,30 +3,34 @@ import mainLogo from "/logo.svg";
 import lion from "/lion.svg";
 import logoWithText from "/logoWithText.svg";
 import instagram from "/instagram.svg";
-import MenuBar from "../components/MenuBar"
+import MenuBar from "../components/MenuBar";
 ---
 
-<MenuBar client:load></MenuBar>
-<div class="fixed flex w-screen h-5 justify-center gap-12 font-display font-bold text-lg py-11 items-center z-50 flex-wrap">
-    <a href="/">
-        <div class="relative h-9 w-9">
-            <img src={mainLogo} class="w-full h-full" alt="" />
-        </div>
-    </a>
-    <div class="hover:px-5 duration-150">
-        <a href="/">Home</a>
+<div
+  class="fixed z-50 flex h-5 w-screen flex-wrap items-center justify-center gap-12 py-11 font-display text-lg font-bold"
+>
+  <MenuBar client:only="react" />
+  <a href="/">
+    <div class="relative h-9 w-9">
+      <img src={mainLogo} class="h-full w-full" alt="" />
     </div>
-    <div class="hover:px-5 duration-150">
-        <a href="/ourteam">Our Team</a>
-    </div>
-    <div class="hover:px-5 duration-150">
-        <a href="/achievements">Awards and Highlights</a>
-    </div>
-    <div class="hover:px-5 duration-150">
-        <a href="/posts">Outreach</a>
-    </div>
-    <div class="hover:px-5 duration-150">
-        <a href="/vtxcads">VTX CADs</a>
-    </div>
-    <a href="https://www.instagram.com/ftcvertex/"><img src={instagram} alt="" class="w-8 h-8 invert"/></a>
+  </a>
+  <div class="duration-150 hover:px-5">
+    <a href="/">Home</a>
+  </div>
+  <div class="duration-150 hover:px-5">
+    <a href="/ourteam">Our Team</a>
+  </div>
+  <div class="duration-150 hover:px-5">
+    <a href="/achievements">Awards and Highlights</a>
+  </div>
+  <div class="duration-150 hover:px-5">
+    <a href="/posts">Outreach</a>
+  </div>
+  <div class="duration-150 hover:px-5">
+    <a href="/vtxcads">VTX CADs</a>
+  </div>
+  <a href="https://www.instagram.com/ftcvertex/"
+    ><img src={instagram} alt="" class="h-8 w-8 invert" />
+  </a>
 </div>

@@ -6,22 +6,29 @@ import instagram from "/instagram.svg";
 import "animate.css";
 ---
 
-<footer class="bg-neutral-50 text-black flex justify-between py-10 px-24 items-center">
-    <div class="flex flex-col justify-start gap-5">
-        <a href="/">
-            <div class="relative w-72 h-36" data-scroll>
-                <img src={logoWithText} alt="" class="w-full h-full"/>
-            </div>
-        </a>
-    </div>
-    <div class="flex flex-col justify-end gap-2 text-right font-display font-bold">
-        <a href="/">Home</a>
-        <a href="/ourteam">Our Team</a>
-        <a href="/achievements">Awards and Highlights</a>
-        <a href="/posts">Outreach</a>
-        <a href="/vtxcads">VTX CADs</a>
-        <a href="https://www.instagram.com/ftcvertex/" class="flex flex-row-reverse">
-            <img src={instagram} alt="" class="w-8 h-8" />
-        </a>
-    </div>
+<footer
+  class="flex items-center justify-between bg-neutral-50 py-10 px-24 text-black"
+>
+  <div class="flex flex-col justify-start gap-5">
+    <a href="/">
+      <div class="relative h-36 w-72" data-scroll>
+        <img src={logoWithText} alt="" class="h-full w-full" />
+      </div>
+    </a>
+  </div>
+  <div
+    class="flex flex-col justify-end gap-2 text-right font-display font-bold"
+  >
+    <a href="/">Home</a>
+    <a href="/ourteam">Our Team</a>
+    <a href="/achievements">Awards and Highlights</a>
+    <a href="/posts">Outreach</a>
+    <a href="/vtxcads">VTX CADs</a>
+    <a
+      href="https://www.instagram.com/ftcvertex/"
+      class="flex flex-row-reverse"
+    >
+      <img src={instagram} alt="" class="h-8 w-8" />
+    </a>
+  </div>
 </footer>
