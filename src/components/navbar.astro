@@ -3,9 +3,11 @@ import mainLogo from "/logo.svg";
 import lion from "/lion.svg";
 import logoWithText from "/logoWithText.svg";
 import instagram from "/instagram.svg";
+import MenuBar from "../components/MenuBar"
 ---
 
-<div class="fixed flex w-screen h-5 justify-center gap-12 font-display font-bold text-lg py-11 items-center z-50">
+<MenuBar client:load></MenuBar>
+<div class="fixed flex w-screen h-5 justify-center gap-12 font-display font-bold text-lg py-11 items-center z-50 flex-wrap">
     <a href="/">
         <div class="relative h-9 w-9">
             <img src={mainLogo} class="w-full h-full" alt="" />

@@ -21,6 +21,9 @@ import sitemap from "@astrojs/sitemap";
 import prefetch from "@astrojs/prefetch";
 
 // https://astro.build/config
+import react from "@astrojs/react";
+
+// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), mdx(), image(), partytown(), sitemap(), prefetch()]
+  integrations: [tailwind(), mdx(), image(), partytown(), sitemap(), prefetch(), react()]
 });

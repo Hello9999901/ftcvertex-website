@@ -9,6 +9,9 @@ module.exports = {
 		},
 		extend: {
 			exeter: '#9a1d2f',
+			animation: {
+				'spin-slow': 'spin 0s linear alternate infinite',
+			}
 		},
 	},
 	plugins: [require("@tailwindcss/typography")],
