@@ -12,13 +12,11 @@ export default function Menu() {
 		<>
 			<button
 				className={
-					(isActive ? "bg-transparent" : "") +
-					" " +
-					"group peer z-10 h-7 w-7"
+					(isActive ? "bg-transparent" : "") + " " + "group peer z-10"
 				}
 				onClick={handleClick}
 			>
-				<IoIosMenu className="absolute block h-7 w-7 group-[.bg-transparent]:hidden"></IoIosMenu>
+				<IoIosMenu className="opacity-100 h-7 w-7 group-[.bg-transparent]:opacity-0 duration-300 ease-in"></IoIosMenu>
 			</button>
 			<div
 				className={
@@ -28,28 +26,22 @@ export default function Menu() {
 				}
 				onClick={handleClick}
 			></div>
-			<div className="px-cropin-inverse fixed top-0 left-0 hidden h-screen w-20 items-center bg-neutral-300/30 py-20 backdrop-blur-lg peer-[.bg-transparent]:flex">
-				<ul className="flex flex-col gap-8 text-left text-sm font-medium">
-					<li>
-						<a href="#">Home</a>
+			<div className="-translate-x-full ease-in-out duration-500 fixed top-0 left-0 flex h-screen w-72 justify-center bg-neutral-800 py-20 backdrop-blur-lg peer-[.bg-transparent]:translate-x-0">
+				<ul className="flex flex-col text-right text-lg gap-8 text-white font-display font-bold">
+					<li className="hover:-translate-x-3 duration-200">
+						<a href="/">Home</a>
 					</li>
-					<li>
-						<a href="#">News</a>
+					<li className="hover:-translate-x-3 duration-200">
+						<a href="/ourteam">Our Team</a>
 					</li>
-					<li>
-						<a href="#">Life</a>
+					<li className="hover:-translate-x-3 duration-200">
+						<a href="/achievements">Awards and Highlights</a>
 					</li>
-					<li>
-						<a href="#">Opinions</a>
+					<li className="hover:-translate-x-3 duration-200">
+						<a href="/posts">Outreach</a>
 					</li>
-					<li>
-						<a href="#">Sports</a>
-					</li>
-					<li>
-						<a href="#">Humour</a>
-					</li>
-					<li>
-						<a href="#">Archive</a>
+					<li className="hover:-translate-x-3 duration-200">
+						<a href="/vtxcads">VTX CADs</a>
 					</li>
 				</ul>
 			</div>
