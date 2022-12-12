@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { IoMdClose, IoIosMenu } from "react-icons/io/index";
+import { IoIosMenu } from "react-icons/io/index";
 
 export default function Menu() {
 	const [isActive, setIsActive] = useState(false);
@@ -26,7 +26,7 @@ export default function Menu() {
 				}
 				onClick={handleClick}
 			></div>
-			<div className="-translate-x-full ease-in-out duration-500 fixed top-0 left-0 flex h-screen w-72 justify-center bg-neutral-800 py-20 backdrop-blur-lg peer-[.bg-transparent]:translate-x-0">
+			<div className="ease-in-out duration-500 fixed top-0 -left-72 flex h-screen w-72 justify-center bg-neutral-800 py-20 backdrop-blur-lg peer-[.bg-transparent]:translate-x-full">
 				<ul className="flex flex-col text-right text-lg gap-8 text-white font-display font-bold">
 					<li className="hover:-translate-x-3 duration-200">
 						<a href="/">Home</a>
