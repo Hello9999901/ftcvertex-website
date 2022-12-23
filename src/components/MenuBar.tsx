@@ -16,7 +16,7 @@ export default function Menu() {
 				}
 				onClick={handleClick}
 			>
-				<IoIosMenu className="opacity-100 h-7 w-7 group-[.bg-transparent]:opacity-0 duration-300 ease-in"></IoIosMenu>
+				<IoIosMenu className="opacity-100 h-7 w-7"></IoIosMenu>
 			</button>
 			<div
 				className={
@@ -26,8 +26,8 @@ export default function Menu() {
 				}
 				onClick={handleClick}
 			></div>
-			<div className="ease-in-out duration-500 fixed top-0 -left-72 flex h-screen w-72 justify-center bg-neutral-800 py-20 backdrop-blur-lg peer-[.bg-transparent]:translate-x-full">
-				<ul className="flex flex-col text-right text-lg gap-8 text-white font-display font-bold">
+			<div className="ease-in-out duration-500 fixed top-0 -left-48 md:-left-72 flex h-screen w-48 md:w-72 justify-center bg-gradient-to-b from-black/80 py-20 peer-[.bg-transparent]:translate-x-full">
+				<ul className="flex flex-col text-right text-sm md:text-lg gap-3 md:gap-8 text-white font-display font-bold">
 					<li className="hover:-translate-x-3 duration-200">
 						<a href="/">Home</a>
 					</li>
@@ -35,7 +35,7 @@ export default function Menu() {
 						<a href="/ourteam">Our Team</a>
 					</li>
 					<li className="hover:-translate-x-3 duration-200">
-						<a href="/achievements">Awards and Highlights</a>
+						<a href="/achievements">Achievements</a>
 					</li>
 					<li className="hover:-translate-x-3 duration-200">
 						<a href="/posts">Outreach</a>
