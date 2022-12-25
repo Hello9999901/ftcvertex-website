@@ -9,107 +9,168 @@ import "animate.css";
 
 <Layout title="FTC VERTEX 15534">
 	<main>
-		<div>
-			<div class="flex h-screen w-screen items-center justify-center">
-				<div
-					class="relative z-10 h-1/3 md:h-3/4 w-full"
-					data-scroll
-					data-scroll-speed="3"
-				>
-					<img src={mainLogo} alt="" class="h-full w-full" />
-				</div>
-				<div class="absolute px-4 md:px-0">
-					<h1
-						class="animate__animated animate__fadeIn text-center font-hype text-[120px] md:text-[250px] tracking-tight"
-						data-scroll
-						data-scroll-speed="5"
-					>
-						1 5 5 3 4
-					</h1>
-					<p
-						class="animate__animated animate__fadeIn text-center md:text-left font-display text-3xl font-bold tracking-wide"
-						data-scroll
-						data-scroll-speed="2"
-					>
-						FTC VERTEX
-					</p>
-				</div>
-			</div>
-			<h1
-				class="absolute right-0 origin-top-right rotate-90 font-hype text-4xl text-[#9a1d2f] hidden md:block"
+		<div class="flex h-screen w-screen items-center justify-center">
+			<canvas
+				id="hero-animation"
+				class="fixed -z-50 w-full animate__animated animate__fadeIn"
+				data-scroll
+				data-scroll-sticky
+				data-scroll-target="body"
+				data-scroll-id="canvasID">
+			</canvas>
+			<div
+				class="relative z-10 h-1/3 w-full md:h-3/4"
+				data-scroll
+				data-scroll-speed="3"
 			>
-				<span class="px-20">XAPITI DEOT</span>
-				<span class="px-20">NON SIBI</span>
-			</h1>
-			<h1
-				class="absolute left-0 origin-bottom-left rotate-90 font-hype text-4xl text-[#9a1d2f] hidden md:block"
-			>
-				<span class="px-20">XAPITI DEOT</span>
-				<span class="px-20">NON SIBI</span>
-			</h1>
-			<div class="h-screen px-8 md:px-48 md:py-32">
-				<div class="max-w-[1200px]">
-					<h1
-						class="-mb-3 font-display text-6xl py-8 md:py-0 md:text-8xl font-bold"
-						data-scroll
-						data-scroll-speed="2"
-					>
-						About Us
-					</h1>
-					<p class="pl-6 font-body text-lg">
-						Founded in the fall of 2018, our team consists of a
-						diverse group of students passionate about using
-						knowledge in robotics and STEAM to benefit larger
-						communities. Though we have enjoyed enormous success, we
-						continue to strive to explore the limit of the
-						intersection of knowledge and creativity. Going into our
-						fifth year, we are thrilled by the challenges that await
-						us in the upcoming 2022-2023 season!
-					</p>
-				</div>
+				<img src={mainLogo} alt="" class="h-full w-full" />
 			</div>
-			<div class="h-screen px-8 md:px-48 md:py-10">
+			<div class="absolute px-4 md:px-0">
 				<h1
-					class="py-10 text-right font-display text-6xl md:text-8xl font-bold"
+					class="animate__animated animate__fadeIn text-center font-hype text-[120px] tracking-tight md:text-[250px]"
+					data-scroll
+					data-scroll-speed="5"
+				>
+					1 5 5 3 4
+				</h1>
+				<p
+					class="animate__animated animate__fadeIn text-center font-display text-3xl font-bold tracking-wide md:text-left"
 					data-scroll
 					data-scroll-speed="2"
-					data-scroll-direction="horizontal"
-					data-scroll-delay="1"
 				>
-					More
-				</h1>
-				<div class="py-6">
-					<div
-						class="w-100% h-6 md:h-8 bg-gradient-to-r from-transparent to-[#9a1d2f]"
-					>
-					</div>
-					<h1 class="font-display text-lg font-bold">
-						100% Giga Chads
-					</h1>
-				</div>
-				<div class="py-6">
-					<div
-						class="w-100% h-8 bg-gradient-to-r from-transparent to-[#9a1d2f]"
-					>
-					</div>
-					<h1 class="font-display text-lg font-bold">100% Better</h1>
-				</div>
-				<div class="py-6">
-					<div
-						class="h-8 w-1/2 bg-gradient-to-r from-transparent to-[#9a1d2f]"
-					>
-					</div>
-					<h1 class="font-display text-lg font-bold">
-						50% Brain Cells
-					</h1>
-				</div>
+					FTC VERTEX
+				</p>
 			</div>
-			<h1
-				class="absolute right-0 origin-top-right rotate-90 font-hype text-4xl text-[#9a1d2f] hidden md:block"
-			>
-				<span class="px-20">XAPITI DEOT</span>
-				<span class="px-20">NON SIBI</span>
-			</h1>
 		</div>
+		<h1
+			class="absolute right-0 hidden origin-top-right rotate-90 font-hype text-4xl text-[#9a1d2f] md:block"
+		>
+			<span class="px-20">XAPITI DEOT</span>
+			<span class="px-20">NON SIBI</span>
+		</h1>
+		<h1
+			class="absolute left-0 hidden origin-bottom-left rotate-90 font-hype text-4xl text-[#9a1d2f] md:block"
+		>
+			<span class="px-20">XAPITI DEOT</span>
+			<span class="px-20">NON SIBI</span>
+		</h1>
+		<div class="flex h-screen w-screen items-center justify-center">
+				<h1
+					class="animate__animated animate__fadeIn text-center font-hype tracking-wide text-2xl md:text-6xl"
+					data-scroll
+					data-scroll-speed="5"
+				>2022-23 POWERPLAY<sup class="ml-1 text-sm -top-[2.5em]">SM</sup></h1>
+		</div>
+		<div class="h-screen px-8 md:px-48 md:py-32">
+			<div class="max-w-[1200px]">
+				<h1
+					class="-mb-3 py-8 font-display text-6xl font-bold md:py-0 md:text-8xl"
+					data-scroll
+					data-scroll-speed="2"
+				>
+					About Us
+				</h1>
+				<p class="pl-6 font-body text-lg">
+					Founded in the fall of 2018, our team consists of a diverse
+					group of students passionate about using knowledge in
+					robotics and STEAM to benefit larger communities. Though we
+					have enjoyed enormous success, we continue to strive to
+					explore the limit of the intersection of knowledge and
+					creativity. Going into our fifth year, we are thrilled by
+					the challenges that await us in the upcoming 2022-2023
+					season!
+				</p>
+			</div>
+		</div>
+		<div class="h-screen px-8 md:px-48 md:py-10">
+			<h1
+				class="py-10 text-right font-display text-6xl font-bold md:text-8xl"
+				data-scroll
+				data-scroll-speed="2"
+				data-scroll-direction="horizontal"
+				data-scroll-delay="1"
+			>
+				More
+			</h1>
+			<div class="py-6">
+				<div
+					class="w-100% h-6 bg-gradient-to-r from-transparent to-[#9a1d2f] md:h-8"
+				>
+				</div>
+				<h1 class="font-display text-lg font-bold">100% Giga Chads</h1>
+			</div>
+			<div class="py-6">
+				<div
+					class="w-100% h-8 bg-gradient-to-r from-transparent to-[#9a1d2f]"
+				>
+				</div>
+				<h1 class="font-display text-lg font-bold">100% Better</h1>
+			</div>
+			<div class="py-6">
+				<div
+					class="h-8 w-1/2 bg-gradient-to-r from-transparent to-[#9a1d2f]"
+				>
+				</div>
+				<h1 class="font-display text-lg font-bold">50% Brain Cells</h1>
+			</div>
+		</div>
+		<h1
+			class="absolute right-0 hidden origin-top-right rotate-90 font-hype text-4xl text-[#9a1d2f] md:block"
+		>
+			<span class="px-20">XAPITI DEOT</span>
+			<span class="px-20">NON SIBI</span>
+		</h1>
 	</main>
 </Layout>
+
+<script>
+	import LocomotiveScroll from "locomotive-scroll";
+
+	const scroll = new LocomotiveScroll({
+		el: document.querySelector("[data-scroll-container]") as HTMLElement,
+		smooth: true,
+		resetNativeScroll: true,
+	});
+
+	scroll.on("scroll", (args) => {
+		// Get all current elements : args.currentElements
+		if (typeof args.currentElements["canvasID"] === "object") {
+			let progress = args.currentElements["canvasID"].progress;
+			console.log(progress);
+			const frameIndex = Math.min(
+				frameCount - 1,
+				Math.ceil(progress * frameCount)
+			);
+			console.log(frameIndex);
+			requestAnimationFrame(() => updateImage(frameIndex + 1));
+		}
+	});
+	const canvas = document.getElementById("hero-animation");
+	const context = canvas.getContext("2d");
+
+	const frameCount = 201;
+	const currentFrame = (index) =>
+		`scroll-animation/img${index.toString().padStart(4, "0")}.jpg`;
+
+	const preloadImages = () => {
+		for (let i = 1; i < frameCount; i++) {
+			const img = new Image();
+			img.src = currentFrame(i);
+		}
+	};
+
+	const img = new Image();
+	img.src = currentFrame(1);
+	canvas.width = 1920;
+	canvas.height = 1080;
+	img.onload = function () {
+		context.drawImage(img, 0, 0);
+	};
+
+	const updateImage = (index) => {
+		img.src = currentFrame(index);
+		context.drawImage(img, 0, 0);
+	};
+
+	preloadImages();
+</script>

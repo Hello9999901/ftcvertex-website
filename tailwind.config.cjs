@@ -4,7 +4,7 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			display: ["century-gothic"],
-			hype: ["pixel-powerline"],
+			hype: ["PixelPowerline"],
 			body: [],
 		},
 		extend: {
