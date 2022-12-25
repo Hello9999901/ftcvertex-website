@@ -5,7 +5,11 @@ import lion from "/lion.svg";
 import logoWithText from "/logoWithText.svg";
 import instagram from "/instagram.svg";
 import "animate.css";
+import Prefetch from "../components/prefetch.astro";
+
+let prefetchedImage = "";
 ---
+<Prefetch href={prefetchedImage}></Prefetch>
 
 <Layout title="FTC VERTEX 15534">
 	<main>
@@ -139,27 +143,25 @@ import "animate.css";
 		// Get all current elements : args.currentElements
 		if (typeof args.currentElements["canvasID"] === "object") {
 			let progress = args.currentElements["canvasID"].progress;
-			console.log(progress);
 			const frameIndex = Math.min(
 				frameCount - 1,
 				Math.ceil(progress * frameCount)
 			);
-			console.log(frameIndex);
 			requestAnimationFrame(() => updateImage(frameIndex + 1));
 		}
 	});
 
-	window.addEventListener("scroll", () => {
-		const scrollTop = html.scrollTop;
-		const maxScrollTop = html.scrollHeight - window.innerHeight;
-		const scrollFraction = scrollTop / maxScrollTop;
-		const frameIndex = Math.min(
-			frameCount - 1,
-			Math.ceil(scrollFraction * frameCount)
-		);
+	// window.addEventListener("scroll", () => {
+	// 	const scrollTop = html.scrollTop;
+	// 	const maxScrollTop = html.scrollHeight - window.innerHeight;
+	// 	const scrollFraction = scrollTop / maxScrollTop;
+	// 	const frameIndex = Math.min(
+	// 		frameCount - 1,
+	// 		Math.ceil(scrollFraction * frameCount)
+	// 	);
 
-		requestAnimationFrame(() => updateImage(frameIndex + 1));
-	});
+	// 	requestAnimationFrame(() => updateImage(frameIndex + 1));
+	// });
 
 	const html = document.documentElement;
 	const canvas = document.getElementById("hero-animation");
@@ -170,9 +172,11 @@ import "animate.css";
 		`scroll-animation/img${index.toString().padStart(4, "0")}.jpg`;
 
 	const preloadImages = () => {
+		console.log("preloading images")
 		for (let i = 1; i < frameCount; i++) {
 			const img = new Image();
 			img.src = currentFrame(i);
+			prefetchedImage = img.src;
 		}
 	};
 
