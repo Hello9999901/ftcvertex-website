@@ -31,7 +31,7 @@ export default defineConfig({
 		image(),
 		partytown(),
 		sitemap(),
-		prefetch(),
+		prefetch({selector: "a"}),
 		react(),
 	],
 });

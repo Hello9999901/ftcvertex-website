@@ -17,14 +17,6 @@ const { title } = Astro.props;
 		smooth: true,
 		resetNativeScroll: true,
 	});
-
-	scroll.on("scroll", (args) => {
-		// Get all current elements : args.currentElements
-		if (typeof args.currentElements["testID"] === "object") {
-			let progress = args.currentElements["testID"].progress;
-			console.log(progress);
-		}
-	});
 </script>
 
 <html lang="en">
@@ -38,8 +30,8 @@ const { title } = Astro.props;
 	<body id="body">
 		<Navbar />
 		<div data-scroll-container>
-			<slot />
-			<Footer />
+			<slot data-scroll-section />
+			<Footer data-scroll-section />
 		</div>
 	</body>
 </html>
