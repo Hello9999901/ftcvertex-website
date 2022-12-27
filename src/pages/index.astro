@@ -127,36 +127,14 @@ import "animate.css";
 </Layout>
 
 <script>
-	// import LocomotiveScroll from "locomotive-scroll";
-
 	const html = document.documentElement;
 
 	const canvas = document.getElementById("hero-animation");
 	const context = canvas.getContext("2d");
 
-	// const scroll = new LocomotiveScroll({
-	// 	el: document.querySelector("[data-scroll-container]") as HTMLElement,
-	// 	smooth: true,
-	// 	resetNativeScroll: true,
-	// });
-
-	// scroll.on("scroll", (args) => {
-	// 	// Get all current elements : args.currentElements
-	// 	if (typeof args.currentElements["canvasID"] === "object") {
-	// 		let progress = args.currentElements["canvasID"].progress;
-	// 		const frameIndex = Math.min(
-	// 			frameCount - 1,
-	// 			Math.ceil(progress * frameCount)
-	// 		);
-	// 		requestAnimationFrame(() => updateImage(frameIndex + 1));
-	// 	}
-	// });
-
 	const frameCount = 148;
 	const currentFrame = (index) =>
-		`/scroll-animation/img${index
-			.toString()
-			.padStart(4, "0")}.jpg`;
+		`/scroll-animation/img${index.toString().padStart(4, "0")}.jpg`;
 
 	const preloadImages = () => {
 		for (let i = 1; i < frameCount; i++) {
@@ -167,8 +145,8 @@ import "animate.css";
 
 	const img = new Image();
 	img.src = currentFrame(1);
-	canvas.width = 1158;
-	canvas.height = 770;
+	canvas.width = 1920;
+	canvas.height = 1080;
 	img.onload = function () {
 		context.drawImage(img, 0, 0);
 	};
