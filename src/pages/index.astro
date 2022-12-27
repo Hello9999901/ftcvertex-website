@@ -5,12 +5,12 @@ import lion from "/lion.svg";
 import logoWithText from "/logoWithText.svg";
 import instagram from "/instagram.svg";
 import "animate.css";
-
 ---
+
 <Layout title="FTC VERTEX 15534">
 	<main>
 		<div class="flex h-screen w-screen items-center justify-center">
-			<!-- <canvas
+			<canvas
 				id="hero-animation"
 				class="animate__animated animate__fadeIn fixed -z-50 w-full"
 				data-scroll
@@ -18,7 +18,7 @@ import "animate.css";
 				data-scroll-target="body"
 				data-scroll-id="canvasID"
 			>
-			</canvas> -->
+			</canvas>
 			<div
 				class="relative z-10 h-1/3 w-full md:h-3/4"
 				data-scroll
@@ -56,7 +56,6 @@ import "animate.css";
 			<span class="px-20">NON SIBI</span>
 		</h1>
 		<div class="flex h-screen w-screen items-center justify-center">
-			<img src="/scroll-animation/img0001.jpg" class="absolute min-h-fit md:w-screen -z-50 object-none md:object-cover">
 			<h1
 				class="animate__animated animate__fadeIn text-center font-hype text-2xl tracking-wide md:text-6xl"
 				data-scroll
@@ -126,3 +125,58 @@ import "animate.css";
 		</h1>
 	</main>
 </Layout>
+
+<script>
+	import LocomotiveScroll from "locomotive-scroll";
+
+	const html = document.documentElement;
+
+	const canvas = document.getElementById("hero-animation");
+	const context = canvas.getContext("2d");
+
+	const scroll = new LocomotiveScroll({
+		el: document.querySelector("[data-scroll-container]") as HTMLElement,
+		smooth: true,
+		resetNativeScroll: true,
+	});
+
+	scroll.on("scroll", (args) => {
+		// Get all current elements : args.currentElements
+		if (typeof args.currentElements["canvasID"] === "object") {
+			let progress = args.currentElements["canvasID"].progress;
+			const frameIndex = Math.min(
+				frameCount - 1,
+				Math.ceil(progress * frameCount)
+			);
+			requestAnimationFrame(() => updateImage(frameIndex + 1));
+		}
+	});
+
+	const frameCount = 202;
+
+	const currentFrame = (index) =>
+		`/scroll-animation/img${index.toString().padStart(4, "0")}.jpg`;
+
+	const images = [null];
+	const preloadImages = () => {
+		for (let i = 1; i < frameCount; i++) {
+			images[i] = new Image();
+			images[i].src = currentFrame(i);
+		}
+	};
+
+	const img = new Image();
+	img.src = currentFrame(1);
+	canvas.width = 1920;
+	canvas.height = 1080;
+	img.onload = function () {
+		context.drawImage(img, 0, 0);
+	};
+
+	const updateImage = (index) => {
+		img.src = currentFrame(index);
+		context.drawImage(images[index], 0, 0);
+	};
+
+	preloadImages();
+</script>

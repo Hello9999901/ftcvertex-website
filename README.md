@@ -3,3 +3,4 @@
 written in astro.build and tailwind css
 
 -   byran huang
+-   eric li (network troubleshooting legend)
