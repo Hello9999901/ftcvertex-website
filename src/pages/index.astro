@@ -5,8 +5,8 @@ import lion from "/lion.svg";
 import logoWithText from "/logoWithText.svg";
 import instagram from "/instagram.svg";
 import "animate.css";
-
 ---
+
 <Layout title="FTC VERTEX 15534">
 	<main>
 		<div class="flex h-screen w-screen items-center justify-center">
@@ -127,59 +127,48 @@ import "animate.css";
 </Layout>
 
 <script>
-	import LocomotiveScroll from "locomotive-scroll";
-
-	const scroll = new LocomotiveScroll({
-		el: document.querySelector("[data-scroll-container]") as HTMLElement,
-		smooth: true,
-		resetNativeScroll: true,
-	});
-
-	scroll.on("scroll", (args) => {
-		// Get all current elements : args.currentElements
-		if (typeof args.currentElements["canvasID"] === "object") {
-			let progress = args.currentElements["canvasID"].progress;
-			const frameIndex = Math.min(
-				frameCount - 1,
-				Math.ceil(progress * frameCount)
-			);
-			requestAnimationFrame(() => updateImage(frameIndex + 1));
-		}
-	});
-
-	// window.addEventListener("scroll", () => {
-	// 	const scrollTop = html.scrollTop;
-	// 	const maxScrollTop = html.scrollHeight - window.innerHeight;
-	// 	const scrollFraction = scrollTop / maxScrollTop;
-	// 	const frameIndex = Math.min(
-	// 		frameCount - 1,
-	// 		Math.ceil(scrollFraction * frameCount)
-	// 	);
-
-	// 	requestAnimationFrame(() => updateImage(frameIndex + 1));
-	// });
+	// import LocomotiveScroll from "locomotive-scroll";
 
 	const html = document.documentElement;
+
 	const canvas = document.getElementById("hero-animation");
 	const context = canvas.getContext("2d");
 
-	const frameCount = 201;
+	// const scroll = new LocomotiveScroll({
+	// 	el: document.querySelector("[data-scroll-container]") as HTMLElement,
+	// 	smooth: true,
+	// 	resetNativeScroll: true,
+	// });
+
+	// scroll.on("scroll", (args) => {
+	// 	// Get all current elements : args.currentElements
+	// 	if (typeof args.currentElements["canvasID"] === "object") {
+	// 		let progress = args.currentElements["canvasID"].progress;
+	// 		const frameIndex = Math.min(
+	// 			frameCount - 1,
+	// 			Math.ceil(progress * frameCount)
+	// 		);
+	// 		requestAnimationFrame(() => updateImage(frameIndex + 1));
+	// 	}
+	// });
+
+	const frameCount = 148;
 	const currentFrame = (index) =>
-		`https://ftcvertex-website.vercel.app/scroll-animation/img${index.toString().padStart(4, "0")}.jpg`;
+		`/scroll-animation/img${index
+			.toString()
+			.padStart(4, "0")}.jpg`;
 
 	const preloadImages = () => {
-		console.log("preloading images")
 		for (let i = 1; i < frameCount; i++) {
 			const img = new Image();
 			img.src = currentFrame(i);
-			console.log(img.src);
 		}
 	};
 
 	const img = new Image();
 	img.src = currentFrame(1);
-	canvas.width = 1920;
-	canvas.height = 1080;
+	canvas.width = 1158;
+	canvas.height = 770;
 	img.onload = function () {
 		context.drawImage(img, 0, 0);
 	};
@@ -188,6 +177,18 @@ import "animate.css";
 		img.src = currentFrame(index);
 		context.drawImage(img, 0, 0);
 	};
+
+	window.addEventListener("scroll", () => {
+		const scrollTop = html.scrollTop;
+		const maxScrollTop = html.scrollHeight - window.innerHeight;
+		const scrollFraction = scrollTop / maxScrollTop;
+		const frameIndex = Math.min(
+			frameCount - 1,
+			Math.ceil(scrollFraction * frameCount)
+		);
+
+		requestAnimationFrame(() => updateImage(frameIndex + 1));
+	});
 
 	preloadImages();
 </script>
