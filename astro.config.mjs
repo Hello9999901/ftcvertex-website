@@ -25,10 +25,11 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://ftcvertex.org',
 	integrations: [
 		tailwind(),
 		mdx(),
-		image(),
+		image({serviceEntryPoint: '@astrojs/image/sharp'}),
 		partytown(),
 		sitemap(),
 		prefetch({selector: "a"}),
