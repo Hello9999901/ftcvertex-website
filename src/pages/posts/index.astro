@@ -5,8 +5,12 @@ import lion from "/lion.svg";
 import logoWithText from "/logoWithText.svg";
 import instagram from "/instagram.svg";
 import "animate.css";
-const allPosts = await Astro.glob("../../pages/posts/*.mdx");
-import { Debug } from "astro/components";
+// Asynchronously loads all .mdx blog posts
+let posts = await Astro.glob("../../pages/posts/*.mdx");
+// Filter out all the posts with "draft: true" present in the frontmatter
+posts = posts.filter((post) => !post.frontmatter.draft);
+// Order all posts in chronological order
+posts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
 ---
 
 <Layout title="FTC VERTEX 15534">
@@ -16,7 +20,7 @@ import { Debug } from "astro/components";
 				<h1 class="pb-8 text-center font-hype text-5xl md:text-9xl">OUTREACH</h1>
 				<ul>
 					{
-						allPosts.map((post) => (
+						posts.map((post) => (
 							<li class="py-6">
 								<a href={post.url}>
 									<p class="font-display text-2xl md:text-3xl font-bold">
@@ -26,18 +30,21 @@ import { Debug } from "astro/components";
 								<div class="pl-4 pt-2 text-md md:text-md">
 									<p>
 										{new Date(
-											post.frontmatter.pubDate
+											post.frontmatter.date
 										).toLocaleDateString()}
 									</p>
 									<p>{post.frontmatter.desc}</p>
 									<p class="text-neutral-500">
-										{post.frontmatter.tags.map(
-											(tag: any) => (
-												<span class="pr-2">
-													{"#" + tag}
-												</span>
-											)
-										)}
+										{
+											((post.frontmatter.tags) ?
+											post.frontmatter.tags.map (
+												(tag: any) => (
+													<span class="pr-2">
+														{"#" + tag}
+													</span>
+												)
+											) : '')
+										}
 									</p>
 								</div>
 							</li>

@@ -24,6 +24,7 @@
 		"locomotive-scroll": "^4.1.4",
 		"react-icons": "^4.7.1",
 		"react-parallax-tilt": "^1.7.72",
+		"sharp": "^0.31.3",
 		"tailwindcss": "^3.2.4"
 	},
 	"devDependencies": {
