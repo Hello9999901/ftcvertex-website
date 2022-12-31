@@ -1,0 +1,136 @@
+---
+
+// This file is for backwards compatibility with the old website
+// WordPress did not have a /post/ folder, but had everything in /
+// This ensures that there will be a proper redirect for every single previous outreach page
+// DO NOT ADD NEW ARTICLES TO THIS PAGE, THIS IS ONLY FOR LEGACY SUPPORT
+
+export async function getStaticPaths() {
+	const pages = [
+		{
+			slug: "24-hours-of-stem-international-festival",
+		},
+		{
+			slug: "canada-fll-kickoff",
+		},
+		{
+			slug: "datarobot-trip",
+		},
+		{
+			slug: "engaging-with-xenexs-coo",
+		},
+		{
+			slug: "esso-robotics-at-the-ymca",
+		},
+		{
+			slug: "esso-robotics",
+		},
+		{
+			slug: "fall-term-has-begun-for-vertex",
+		},
+		{
+			slug: "first-global-conference",
+		},
+		{
+			slug: "first-pumpkins-around-campus",
+		},
+		{
+			slug: "fll-championship-event",
+		},
+		{
+			slug: "ftc-team-meetup",
+		},
+		{
+			slug: "girls-who-code-round-2",
+		},
+		{
+			slug: "girls-who-code",
+		},
+		{
+			slug: "green-umbrella-learning-lab",
+		},
+		{
+			slug: "hosting-our-own-first-lego-league-team",
+		},
+		{
+			slug: "index.astro",
+		},
+		{
+			slug: "interactive-robot-demo-unh-epic-program",
+		},
+		{
+			slug: "irobot",
+		},
+		{
+			slug: "look-out-for-our-vertex-tech-speaker-series",
+		},
+		{
+			slug: "mentoring-ftc-fll-teams",
+		},
+		{
+			slug: "odometry",
+		},
+		{
+			slug: "opencv-tutorial-released",
+		},
+		{
+			slug: "pea-stem-day",
+		},
+		{
+			slug: "planning-ymca-lessons",
+		},
+		{
+			slug: "print4ourlives-the-fight-against-covid-19",
+		},
+		{
+			slug: "rootofrobotics",
+		},
+		{
+			slug: "seacoast-outright",
+		},
+		{
+			slug: "soldering-workshop",
+		},
+		{
+			slug: "some-other-summer-programs",
+		},
+		{
+			slug: "state-championship",
+		},
+		{
+			slug: "stem-day-proposal",
+		},
+		{
+			slug: "talking-to-the-first-director-of-dei",
+		},
+		{
+			slug: "the-second-24-hours-of-stem-festival",
+		},
+		{
+			slug: "virtual-first-lesson-series",
+		},
+		{
+			slug: "vtxcads-2022-faq",
+		},
+		{
+			slug: "🌞-our-summer-outreach-reflection-🌞",
+		}
+	];
+	return pages.map(({ slug }) => {
+		return {
+			params: { slug },
+			props: { slug },
+		};
+	});
+}
+
+const { slug } = Astro.props;
+---
+
+<html>
+	<head>
+		<title>Redirecting...</title>
+		<meta http-equiv="refresh" content={"0;url=/posts/" + slug} />
+	</head>
+	<body class="bg-black"> </body>
+</html>

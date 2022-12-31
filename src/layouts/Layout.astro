@@ -29,22 +29,23 @@ const { title, desc } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="preload" as="style" href="/styles/global.css">
+		<link rel="preload" href="/fonts/pixelpowerline.ttf" as="font" type="font/opentype" crossorigin>
 		<link rel="stylesheet" href="/styles/global.css">
 		<SEO
-		title={title}
+		title={title + " - VERTEX Robotics Phillips Exeter Academy"}
 		description={desc}
 		openGraph={
 			{
 				basic: {
-					title: title,
+					title: (title),
 					type: desc ? desc : "",
-					image: "test",
+					image: "/logo.png",
 				},
 				article: {
 					authors: ["FTC VERTEX 15534"],
 				},
 				image: {
-					alt: "test",
+					alt: "FTC VERTEX 15534",
 				},
 				optional: {
 					siteName: "FTC VERTEX 15534 of Phillips Exeter Academy",
@@ -58,7 +59,6 @@ const { title, desc } = Astro.props;
 		  // extending the default meta tags
 		}}
 		/>
-		<title>{title}</title>
 	</head>
 	<body id="body">
 		<Navbar />

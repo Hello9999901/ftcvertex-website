@@ -1,6 +1,8 @@
 ---
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar.astro";
+import { SEO } from "astro-seo";
+
 export interface Props {
 	title: string;
 }
@@ -20,8 +22,36 @@ const date = new Date(frontmatter.date).toLocaleDateString();
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="preload" as="style" href="/styles/global.css">
+		<link rel="preload" href="/fonts/pixelpowerline.ttf" as="font" type="font/opentype" crossorigin>
 		<link rel="stylesheet" href="/styles/global.css">
-		<title>{frontmatter.title} | FTC VERTEX 15534</title>
+		<SEO
+		title={frontmatter.title + " - VERTEX Robotics Phillips Exeter Academy"}
+		description={frontmatter.desc}
+		openGraph={
+			{
+				basic: {
+					title: (frontmatter.title),
+					type: frontmatter.desc ? frontmatter.desc : "",
+					image: "/logo.png",
+				},
+				article: {
+					authors: ["FTC VERTEX 15534", frontmatter.author],
+				},
+				image: {
+					alt: "FTC VERTEX 15534",
+				},
+				optional: {
+					siteName: "FTC VERTEX 15534 of Phillips Exeter Academy",
+					locale: "en",
+				}
+			}
+		}
+		extend={{
+		  // extending the default link tags
+		  link: [{ rel: "icon", href: "/favicon.ico" }],
+		  // extending the default meta tags
+		}}
+		/>
 	</head>
 	<body>
 		<Navbar />
