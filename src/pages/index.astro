@@ -8,6 +8,7 @@ import "animate.css";
 ---
 
 <Layout title="FTC VERTEX 15534" desc="FTC VERTEX 15534 of Phillips Exeter Academy in Exeter, New Hampshire is a competitive robotics team. The team">
+	<link rel="preload" as="image" href="/logo.svg">
 	<main>
 		<div class="flex h-screen w-screen items-center justify-center">
 			<canvas
@@ -24,9 +25,9 @@ import "animate.css";
 				data-scroll
 				data-scroll-speed="3"
 			>
-				<img src={mainLogo} alt="" class="h-full w-full" />
+				<img src={mainLogo} alt="" class="max-h-screen max-w-screen h-full w-full" />
 			</div>
-			<div class="absolute px-4 md:px-0 min-w-screen min-h-screen">
+			<div class="absolute px-4 md:px-0 min-w-1/2 min-h-1/2">
 				<h1
 					class="animate__animated animate__fadeIn text-center font-hype text-[120px] tracking-tight md:text-[250px]"
 					data-scroll
