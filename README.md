@@ -1,12 +1,20 @@
 # FTCVERTEX 15534 Website
 
-written in astro.build and tailwind css
+Website written in Astro with React integration and Tailwind CSS. Hosted on Vercel. Scrolling video animation created in Blender 3D.
 
 ## Development
 
+Download the source code and run:
 ```sh
 npm run dev
 ```
 
-- byran huang
-- eric li (network troubleshooting legend)
+## Dev Branch Preview:
+
+https://dev.ftcvertex.org
+
+## Creator:
+- Byran Huang @Hello9999901
+
+Special Thanks to:
+ - Eric (Mastermind) Li @ELMTN for fixing the scrolling video animation!
