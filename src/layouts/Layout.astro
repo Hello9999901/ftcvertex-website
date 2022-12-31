@@ -1,5 +1,4 @@
 ---
-import "../styles/global.css";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar.astro";
 import { SEO } from "astro-seo";
@@ -29,25 +28,26 @@ const { title, desc } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="preload" as="style" href="/styles/global.css">
+		<link rel="stylesheet" href="/styles/global.css">
 		<SEO
 		title={title}
 		description={desc}
 		openGraph={
 			{
 				basic: {
-					title: "test",
-					type: "test",
+					title: title,
+					type: desc ? desc : "",
 					image: "test",
-					url: "test"
 				},
 				article: {
-					authors: ["author"],
+					authors: ["FTC VERTEX 15534"],
 				},
 				image: {
 					alt: "test",
 				},
 				optional: {
-					siteName: "test",
+					siteName: "FTC VERTEX 15534 of Phillips Exeter Academy",
 					locale: "en",
 				}
 			}

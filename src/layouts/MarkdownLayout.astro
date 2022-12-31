@@ -1,5 +1,4 @@
 ---
-import "../styles/global.css";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar.astro";
 export interface Props {
@@ -20,6 +19,8 @@ const date = new Date(frontmatter.date).toLocaleDateString();
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="preload" as="style" href="/styles/global.css">
+		<link rel="stylesheet" href="/styles/global.css">
 		<title>{frontmatter.title} | FTC VERTEX 15534</title>
 	</head>
 	<body>
