@@ -1,4 +1,3 @@
-@import url("https://use.typekit.net/qyw8dll.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -27,10 +26,33 @@
 @font-face {
 	font-family: "PixelPowerline";
 	src: url("/fonts/pixelpowerline.ttf") format("opentype");
-	font-display: auto;
+	font-display: swap;
 	font-style: normal;
 	font-weight: 400;
 	font-stretch: normal;
+}
+@font-face {
+	font-family:"century-gothic";
+	src:url("https://use.typekit.net/af/40bdad/00000000000000007735ba11/30/l?subset_id=2&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/40bdad/00000000000000007735ba11/30/d?subset_id=2&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/40bdad/00000000000000007735ba11/30/a?subset_id=2&fvd=n7&v=3") format("opentype");
+	font-display:swap;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+	font-family:"century-gothic";
+	src:url("https://use.typekit.net/af/0f9780/00000000000000007735ba15/30/l?subset_id=2&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/0f9780/00000000000000007735ba15/30/d?subset_id=2&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/0f9780/00000000000000007735ba15/30/a?subset_id=2&fvd=i7&v=3") format("opentype");
+	font-display:swap;font-style:italic;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+	font-family:"century-gothic";
+	src:url("https://use.typekit.net/af/9e55b6/00000000000000007735ba19/30/l?subset_id=2&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/9e55b6/00000000000000007735ba19/30/d?subset_id=2&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/9e55b6/00000000000000007735ba19/30/a?subset_id=2&fvd=i4&v=3") format("opentype");
+	font-display:swap;font-style:italic;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+	font-family:"century-gothic";
+	src:url("https://use.typekit.net/af/78c6b9/00000000000000007735ba1f/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/78c6b9/00000000000000007735ba1f/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/78c6b9/00000000000000007735ba1f/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+	font-display:swap;font-style:normal;font-weight:400;font-stretch:normal;
 }
 
 a {
