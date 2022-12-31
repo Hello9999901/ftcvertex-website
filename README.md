@@ -1,4 +1,4 @@
-# FTCVERTEX 15534 Website
+# FTC VERTEX 15534 Website
 
 Website written in Astro with React integration and Tailwind CSS. Hosted on Vercel. Scrolling video animation created in Blender 3D.
 
