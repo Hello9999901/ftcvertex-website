@@ -11,7 +11,7 @@ import "animate.css";
 	class="fixed z-50 flex h-5 w-screen flex-wrap items-center justify-center gap-12 pt-6 pb-16 font-display text-lg font-bold bg-gradient-to-b from-black animate__animated animate__fadeIn"
 >
 	<MenuBar client:load />
-	<a href="/">
+	<a href="/" aria-label="FTC VERTEX Logo">
 		<div class="relative h-9 w-9">
 			<img src={mainLogo} class="h-full w-full" alt="" />
 		</div>
@@ -31,7 +31,6 @@ import "animate.css";
 	<div class="duration-150 hover:px-5 md:block hidden">
 		<a href="/vtxcads">VTX CADs</a>
 	</div>
-	<a href="https://www.instagram.com/ftcvertex/"
-		><img src={instagram} alt="" class="h-6 w-6 md:h-8 md:w-8 invert" />
+	<a href="https://www.instagram.com/ftcvertex/" aria-label="Instagram Page"><img src={instagram} alt="" class="h-6 w-6 md:h-8 md:w-8 invert" />
 	</a>
 </div>

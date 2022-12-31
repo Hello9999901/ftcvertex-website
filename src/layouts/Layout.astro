@@ -2,11 +2,13 @@
 import "../styles/global.css";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar.astro";
+import { SEO } from "astro-seo";
 export interface Props {
 	title: string;
+	desc?: string;
 }
 
-const { title } = Astro.props;
+const { title, desc } = Astro.props;
 ---
 
 <script>
@@ -17,6 +19,8 @@ const { title } = Astro.props;
 		smooth: true,
 		resetNativeScroll: true,
 	});
+
+	document.documentElement.setAttribute('lang', 'en');
 </script>
 
 <html lang="en">
@@ -25,6 +29,35 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<SEO
+		title={title}
+		description={desc}
+		openGraph={
+			{
+				basic: {
+					title: "test",
+					type: "test",
+					image: "test",
+					url: "test"
+				},
+				article: {
+					authors: ["author"],
+				},
+				image: {
+					alt: "test",
+				},
+				optional: {
+					siteName: "test",
+					locale: "en",
+				}
+			}
+		}
+		extend={{
+		  // extending the default link tags
+		  link: [{ rel: "icon", href: "/favicon.ico" }],
+		  // extending the default meta tags
+		}}
+		/>
 		<title>{title}</title>
 	</head>
 	<body id="body">

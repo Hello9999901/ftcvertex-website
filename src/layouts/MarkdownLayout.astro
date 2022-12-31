@@ -11,13 +11,7 @@ const date = new Date(frontmatter.date).toLocaleDateString();
 ---
 
 <script>
-	import LocomotiveScroll from "locomotive-scroll";
-
-	const scroll = new LocomotiveScroll({
-		el: document.querySelector("[data-scroll-container]") as HTMLElement,
-		smooth: true,
-		resetNativeScroll: true,
-	});
+	document.documentElement.setAttribute('lang', 'en');
 </script>
 
 <html lang="en">
@@ -30,17 +24,17 @@ const date = new Date(frontmatter.date).toLocaleDateString();
 	</head>
 	<body>
 		<Navbar />
-		<div data-scroll-container>
+		<div>
 			<div class="flex h-auto min-h-screen w-screen justify-center">
 				<div
 					class="prose-inverse prose-lg h-auto w-full px-8 md:px-0 md:w-2/3 py-32 prose-headings:font-display prose-headings:font-bold prose-a:underline prose-a:underline-offset-2 prose-a:duration-200 hover:prose-a:text-red-500 hover:prose-a:underline-offset-4"
 				>
 					<h1 class="my-0">{frontmatter.title}</h1>
 					<i>{date}</i>
-					<slot data-scroll-section />
+					<slot />
 				</div>
 			</div>
-			<Footer data-scroll-section />
+			<Footer/>
 		</div>
 	</body>
 </html>

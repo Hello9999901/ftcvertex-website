@@ -24,15 +24,14 @@ import prefetch from "@astrojs/prefetch";
 import react from "@astrojs/react";
 
 // https://astro.build/config
+import compress from "astro-compress";
+
+// https://astro.build/config
 export default defineConfig({
-	site: 'https://ftcvertex.org',
-	integrations: [
-		tailwind(),
-		mdx(),
-		image({serviceEntryPoint: '@astrojs/image/sharp'}),
-		partytown(),
-		sitemap(),
-		prefetch({selector: "a"}),
-		react(),
-	],
+  site: 'https://ftcvertex.org',
+  integrations: [tailwind(), mdx(), image({
+    serviceEntryPoint: '@astrojs/image/sharp'
+  }), partytown(), sitemap(), prefetch({
+    selector: "a"
+  }), react(), compress()]
 });

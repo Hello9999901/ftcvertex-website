@@ -11,6 +11,7 @@ export default function Menu() {
 	return (
 		<>
 			<button
+				aria-label="Menu Button"
 				className={
 					(isActive ? "bg-transparent" : "") + " " + "group peer z-10"
 				}
