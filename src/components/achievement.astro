@@ -1,0 +1,19 @@
+---
+export interface Props {
+	year: string;
+	month: string;
+}
+
+const { year, month } = Astro.props;
+---
+<div
+    class="flex odd:justify-end odd:text-right even:justify-start even:text-left my-6"
+>
+    <div class="md:w-1/2 px-6 bg-neutral-900 rounded-2xl p-5 md:-mx-10">
+        <h1 class="font-hype text-2xl md:text-4xl">
+            <span class="text-2xl">{month}</span>
+            {year}
+        </h1>
+        <p class="even:text-left odd:text-right text-sm md:text-md"><slot/></p>
+    </div>
+</div>
