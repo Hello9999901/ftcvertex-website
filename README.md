@@ -14,13 +14,7 @@ npm run dev
 https://dev.ftcvertex.org
 
 ## Creator:
-
 - Byran Huang @Hello9999901
 
 ## Special Thanks to:
-
-- Eric (Mastermind) Li @EL-MTN for fixing the scrolling video animation!
-
-## Special Notes:
-
-- Astro 2.0 stable is running, but `@astrojs/tailwind` requires `3.0.0-beta.1`. Not smart for production.
+ - Eric (Mastermind) Li @EL-MTN for fixing the scrolling video animation!
