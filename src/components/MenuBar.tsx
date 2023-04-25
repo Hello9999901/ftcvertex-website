@@ -44,6 +44,9 @@ export default function Menu() {
 					<li className="hover:-translate-x-3 duration-200">
 						<a href="/vtxcads">VTX CADs</a>
 					</li>
+					<li className="hover:-translate-x-3 duration-200">
+						<a href="/store">Store</a>
+					</li>
 				</ul>
 			</div>
 		</>
