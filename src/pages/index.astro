@@ -5,6 +5,7 @@ import lion from "/lion.svg";
 import logoWithText from "/logoWithText.svg";
 import instagram from "/instagram.svg";
 import "animate.css";
+import Typewriter from 'typewriter-effect';
 ---
 
 <Layout title="FTC VERTEX 15534" desc="FTC VERTEX 15534 of Phillips Exeter Academy in Exeter, New Hampshire is a competitive robotics team. The team has competed in the FIRST Tech Challenege competition since 2018 and has won countless awards." author="Byran Huang">
@@ -21,7 +22,7 @@ import "animate.css";
 			>
 			</canvas>
 			<div
-				class="relative z-10 h-1/3 w-full md:h-3/4"
+				class="relative -z-10 h-1/3 w-full md:h-3/4"
 				data-scroll
 				data-scroll-speed="3"
 			>
@@ -29,7 +30,7 @@ import "animate.css";
 			</div>
 			<div class="absolute px-4 md:px-0 min-w-1/2 min-h-1/2">
 				<h1
-					class="animate__animated animate__fadeIn text-center font-hype text-[120px] tracking-tight md:text-[250px]"
+					class="animate__animated animate__fadeIn text-center font-hype text-[120px] tracking-tight md:text-[250px] drop-shadow-xl"
 					data-scroll
 					data-scroll-speed="5"
 				>
@@ -64,6 +65,13 @@ import "animate.css";
 			>
 				2022-23 POWERPLAY<sup class="-top-[2.5em] ml-1 text-sm">SM</sup>
 			</h1>
+			<h1
+				class="animate__animated animate__fadeIn text-center font-hype text-2xl tracking-wide md:text-6xl"
+				data-scroll
+				data-scroll-speed="5"
+			>
+				SEE YOU AT WORLDS.
+			</h1>
 		</div>
 		<div class="h-screen px-8 md:px-48 md:py-32">
 			<div class="max-w-[1200px]">
@@ -86,37 +94,8 @@ import "animate.css";
 				</p>
 			</div>
 		</div>
-		<div class="h-screen px-8 md:px-48 md:py-10">
-			<h1
-				class="py-10 text-right font-display text-6xl font-bold md:text-8xl"
-				data-scroll
-				data-scroll-speed="2"
-				data-scroll-direction="horizontal"
-				data-scroll-delay="1"
-			>
-				More
-			</h1>
-			<div class="py-6">
-				<div
-					class="w-100% h-6 bg-gradient-to-r from-transparent to-[#9a1d2f] md:h-8"
-				>
-				</div>
-				<h1 class="font-display text-lg font-bold">100% Giga Chads</h1>
-			</div>
-			<div class="py-6">
-				<div
-					class="w-100% h-8 bg-gradient-to-r from-transparent to-[#9a1d2f]"
-				>
-				</div>
-				<h1 class="font-display text-lg font-bold">100% Better</h1>
-			</div>
-			<div class="py-6">
-				<div
-					class="h-8 w-1/2 bg-gradient-to-r from-transparent to-[#9a1d2f]"
-				>
-				</div>
-				<h1 class="font-display text-lg font-bold">50% Brain Cells</h1>
-			</div>
+		<div class="h-screen w-screen relative flex items-center justify-center">
+			<iframe src="https://www.youtube-nocookie.com/embed/jZF8eRax_Uw" class="w-[75%] h-[75%]" title="2023 States Recap Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 		</div>
 		<h1
 			class="absolute right-0 hidden origin-top-right rotate-90 font-hype text-4xl text-[#9a1d2f] md:block"
