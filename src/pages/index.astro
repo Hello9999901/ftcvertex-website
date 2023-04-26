@@ -57,20 +57,13 @@ import Typewriter from 'typewriter-effect';
 			<span class="px-20">XAPITI DEOT</span>
 			<span class="px-20">NON SIBI</span>
 		</h1>
-		<div class="flex h-screen w-screen items-center justify-center">
+		<div class="flex flex-wrap h-screen w-screen items-center justify-center">
 			<h1
 				class="animate__animated animate__fadeIn text-center font-hype text-2xl tracking-wide md:text-6xl"
 				data-scroll
 				data-scroll-speed="5"
 			>
-				2022-23 POWERPLAY<sup class="-top-[2.5em] ml-1 text-sm">SM</sup>
-			</h1>
-			<h1
-				class="animate__animated animate__fadeIn text-center font-hype text-2xl tracking-wide md:text-6xl"
-				data-scroll
-				data-scroll-speed="5"
-			>
-				SEE YOU AT WORLDS.
+				SEE YOU NEXT YEAR.
 			</h1>
 		</div>
 		<div class="h-screen px-8 md:px-48 md:py-32">
@@ -132,10 +125,10 @@ import Typewriter from 'typewriter-effect';
 		}
 	});
 
-	const frameCount = 202;
+	const frameCount = 201;
 
 	const currentFrame = (index) =>
-		`/scroll-animation/img${index.toString().padStart(4, "0")}.jpg`;
+		`/scroll-animation/img${index.toString().padStart(5, "0")}.jpg`;
 
 	const images = [null];
 	const preloadImages = () => {
@@ -147,8 +140,8 @@ import Typewriter from 'typewriter-effect';
 
 	const img = new Image();
 	img.src = currentFrame(1);
-	canvas.width = 1920;
-	canvas.height = 1080;
+	canvas.width = 3840;
+	canvas.height = 2160;
 	img.onload = function () {
 		context.drawImage(img, 0, 0);
 	};
