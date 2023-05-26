@@ -14,7 +14,7 @@ import Typewriter from 'typewriter-effect';
 		<div class="flex h-screen w-screen items-center justify-center">
 			<canvas
 				id="hero-animation"
-				class="animate__animated animate__fadeIn fixed -z-50 w-full"
+				class="animate__animated animate__fadeIn fixed -z-50 w-full will-change-transform"
 				data-scroll
 				data-scroll-sticky
 				data-scroll-target="body"
@@ -22,7 +22,7 @@ import Typewriter from 'typewriter-effect';
 			>
 			</canvas>
 			<div
-				class="relative -z-10 h-1/3 w-full md:h-3/4"
+				class="relative -z-10 h-1/3 w-full md:h-3/4 will-change-transform"
 				data-scroll
 				data-scroll-speed="3"
 			>
@@ -59,7 +59,16 @@ import Typewriter from 'typewriter-effect';
 		</h1>
 		<div class="flex flex-wrap h-screen w-screen items-center justify-center">
 			<h1
-				class="animate__animated animate__fadeIn text-center font-hype text-2xl tracking-wide md:text-6xl"
+				class="animate__animated animate__fadeIn text-center font-hype text-2xl tracking-wide md:text-8xl"
+				data-scroll
+				data-scroll-speed="5"
+			>
+				WORLD FINALISTS.
+			</h1>
+		</div>
+		<div class="flex flex-wrap h-screen w-screen items-center justify-center">
+			<h1
+				class="animate__animated animate__fadeIn text-center font-hype text-2xl tracking-wide md:text-8xl"
 				data-scroll
 				data-scroll-speed="5"
 			>
@@ -81,14 +90,14 @@ import Typewriter from 'typewriter-effect';
 					robotics and STEAM to benefit larger communities. Though we
 					have enjoyed enormous success, we continue to strive to
 					explore the limit of the intersection of knowledge and
-					creativity. Going into our fifth year, we are thrilled by
-					the challenges that await us in the upcoming 2022-2023
+					creativity. Going into our sixth year, we are thrilled by
+					the challenges that await us in the upcoming 2023-2024
 					season!
 				</p>
 			</div>
 		</div>
-		<div class="h-screen w-screen relative flex items-center justify-center">
-			<iframe src="https://www.youtube-nocookie.com/embed/jZF8eRax_Uw" class="w-[75%] h-[75%]" title="2023 States Recap Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		<div class="h-screen w-screen relative flex items-center justify-center will-change-transform">
+			<iframe src="https://www.youtube.com/embed/QfmojAIfgDo" class="w-[75%] h-[75%]" title="2023 States Recap Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 		</div>
 		<h1
 			class="absolute right-0 hidden origin-top-right rotate-90 font-hype text-4xl text-[#9a1d2f] md:block"
@@ -140,8 +149,8 @@ import Typewriter from 'typewriter-effect';
 
 	const img = new Image();
 	img.src = currentFrame(1);
-	canvas.width = 3840;
-	canvas.height = 2160;
+	canvas.width = 1920;
+	canvas.height = 1080;
 	img.onload = function () {
 		context.drawImage(img, 0, 0);
 	};

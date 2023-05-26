@@ -26,7 +26,7 @@
 @font-face {
 	font-family: "PixelPowerline";
 	src: url("/fonts/pixelpowerline.ttf") format("opentype");
-	font-display: swap;
+	font-display: auto;
 	font-style: normal;
 	font-weight: 400;
 	font-stretch: normal;
